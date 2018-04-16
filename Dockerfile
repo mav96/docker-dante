@@ -35,6 +35,8 @@ RUN set -x \
 # Default configuration
 COPY sockd.conf /etc/
 
+RUN printf 'Telegram16042018\nTelegram16042018\n' | adduser telegram
+
 EXPOSE 1080
 
 ENTRYPOINT ["dumb-init"]
