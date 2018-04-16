@@ -46,6 +46,8 @@ Uncomment line in `sockd.conf`:
 
     socksmethod: username
 
+
+### Starting
 ```
 docker build . -t sock
 docker service create --publish mode=host,target=1080,published=1080  --name sock sock
