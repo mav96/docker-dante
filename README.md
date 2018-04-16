@@ -46,6 +46,11 @@ Uncomment line in `sockd.conf`:
 
     socksmethod: username
 
+```
+docker build . -t sock
+docker service create --publish mode=host,target=1080,published=1080  --name sock sock
+```
+
 Then use SOCKS v5, for example:
 
     $ curl --proxy socks5://john:MyPassword@localhost:1080 https://example.com
